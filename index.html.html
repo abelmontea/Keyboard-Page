@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/009/966/original/Keyboard_%281%29.jpg?1622497470");
+      }
+      h1 {
+        color: #060d44;
+        font-family: Helvetica, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+      }
+      h2 {
+        color: #060d44;
+        font-family: Helvetica, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+      }
+      p {
+        font-family: Helvetica, sans-serif;
+        line-height: 150%;
+        text-align: center;
+      }
+      img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        width: 40%;
+      }
+      button {
+        background: #dfe9f3;
+        border-radius: 7px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        font-family: Helvetica, sans-serif;
+        font-size: large;
+        padding: 10px;
+      }
+
+      button:hover {
+        background: #060d44;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+      }
+      .card {
+        background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        border: 1px solid #060d44;
+        border-radius: 15px;
+        padding: 20px 50px;
+        margin: 50px auto;
+        width: 50%;
+      }
+      .call-to-action {
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+      }
+      .keyboard-examples a {
+        text-decoration: none;
+      }
+      .keyboard-examples a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mechanical Keyboards</title>
+  </head>
+  <body>
+    <div class="card">
+      <h1>BUILDING THE PERFECT KEYBOARD</h1>
+      <h2>
+        It started with a
+        <strong>THOCC...</strong>
+      </h2>
+      <p>
+        My cousin and I sometimes stream video games on the live streaming
+        platform, Twitch. With a decent set-up, my cousin's microphone was able
+        to clearly pick up noises from her keyboard whenever she typed. This
+        soon became an annoyance and she began to look into quieter keyboards,
+        but little did we know we'd jump into a rabit hole with endless twists
+        and turns.
+      </p>
+      <hr />
+      <p>
+        From various colored keycaps to specific weights of a key, mechanical
+        keyboard building has been a hobby we've both actively participated in
+        since 2020. Since the materials that go into building a custom
+        mechanical keyboard tend to be manufactured by small groups of people,
+        the components are often expensive and may take up to a year to actually
+        ship to your door. And once the pre-order has closed, there's a high
+        chance that it'll never be on the market again. So what's the point of
+        building a custom mechanical keyboard?
+      </p>
+      <p>
+        Like any project, hike or long-term investment, building a custom
+        mechanical keyboard is all about the journey. The struggle of finding
+        the exact sound, feel and look just for you results in a
+        <em>unique</em> product that (more than likely) only you have. Dare to
+        jump down this rabit hole as well?
+      </p>
+      <div class="call-to-action">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/009/851/original/Milk-Angle.jpg?1622357302"
+          alt="mechanical keyboard"
+        />
+        <br />
+        <button>Join The Community!</button>
+        <p>
+          <strong>
+            <em> Not sure yet? </em>
+          </strong>
+          Take a look at
+          <span class="keyboard-examples">
+            <a href="https://www.instagram.com/cannon.keys/" target="_blank">
+              examples!
+            </a>
+          </span>
+        </p>
+      </div>
+    </div>
+    <script>
+      function community() {
+        let name = prompt("What is your first name?");
+        let keyboard = prompt("Do you currently own a keyboard?")
+          .toLowerCase()
+          .trim();
+        let h1 = document.querySelector("h1");
+
+        if (keyboard === "yes") {
+          alert("Cool!");
+          h1.innerHTML = name + ", you should start a keyboard collection!";
+        } else {
+          alert("That's okay!");
+          h1.innerHTML = name + ", let's start building your first keyboard!";
+        }
+      }
+      let communityButton = document.querySelector("button");
+      communityButton.addEventListener("click", community);
+    </script>
+  </body>
+</html>
